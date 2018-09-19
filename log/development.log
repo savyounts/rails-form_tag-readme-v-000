@@ -509,3 +509,19 @@ Started GET "/posts/new" for 97.118.157.210 at 2018-09-19 18:11:08 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 97.118.157.210 at 2018-09-19 18:11:28 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 97.118.157.210 at 2018-09-19 18:11:34 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"mypost", "description"=>"desc"}, "authenticity_token"=>"UmtK2JQOe9kr5KcuQ5lytMs5MjyBctf0xyGN72+7t/F+sLy867LRWubipiw+S9rgBhpzDLFPkpMQWHwpQVwwnw=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "mypost"], ["description", "desc"], ["created_at", "2018-09-19 18:11:35.008784"], ["updated_at", "2018-09-19 18:11:35.008784"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.16.205:58343/posts
+Completed 302 Found in 18ms (ActiveRecord: 3.8ms)
